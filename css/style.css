@@ -77,7 +77,6 @@ img {
 
 button {
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -149,7 +148,7 @@ section {
 .site-nav .link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 24px;
+  padding-bottom: 32px;
 
   transition: color var(--time-drn) var(--time-trans-fcn);
 }
@@ -212,7 +211,6 @@ section {
   width: 16px;
   margin-right: 10px;
   fill: var(--prymary-color);
-  transition: fill var(--time-drn) var(--time-trans-fcn);
 }
 
 .icon-phone .icon {
@@ -220,7 +218,6 @@ section {
   width: 10px;
   margin-right: 10px;
   fill: var(--prymary-color);
-  transition: fill var(--time-drn) var(--time-trans-fcn);
 }
 
 .contact .link:hover,
@@ -322,12 +319,12 @@ section {
 
 .modal {
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 528px;
   height: 581px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms ease;
-  top: 50%;
-  left: 50%;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -697,7 +694,6 @@ section {
 }
 
 .subscription input {
-  font-family: inherit;
   width: 358px;
   height: 50px;
   margin-right: 15px;
@@ -707,9 +703,7 @@ section {
   padding-left: 16px;
   padding-right: 16px;
   background: transparent;
-}
-.subscription input:focus,
-.subscription input:focus {
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -810,13 +804,14 @@ section {
 .portfolio-item {
   display: inline-block;
   position: relative;
-  width: 370;
+  width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
 
   background: var(--logo-footer-and-active-link-button);
 }
 .portfolio-link {
+  display: inline-block;
   overflow: hidden;
 }
 
@@ -843,6 +838,12 @@ section {
   color: var(--logo-footer-and-active-link-button);
 }
 
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-link:hover .overlay,
 .portfolio-link:focus .overlay {
   opacity: 0.9;
@@ -855,16 +856,6 @@ section {
 .overflow {
   position: relative;
   overflow: hidden;
-}
-
-.portfolio-link {
-  display: inline-block;
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item {
