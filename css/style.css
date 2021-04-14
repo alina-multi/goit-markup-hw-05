@@ -305,10 +305,11 @@ section {
   left: 0px;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 6;
+  opacity: 1;
+  transition: opacity 500ms ease;
 }
 
 .backdrop.is-hidden {
-  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -683,6 +684,10 @@ section {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.address .link {
+  transition: color var(--time-drn) var(--time-trans-fcn);
+}
+
 .social-icons .icon-footer {
   width: 20px;
   height: 20px;
@@ -812,7 +817,6 @@ section {
 }
 .portfolio-link {
   display: inline-block;
-  overflow: hidden;
 }
 
 .overlay {
@@ -838,8 +842,8 @@ section {
   color: var(--logo-footer-and-active-link-button);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item .portfolio-link:hover,
+.portfolio-item .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -855,10 +859,6 @@ section {
 }
 .overflow {
   position: relative;
-  overflow: hidden;
-}
-
-.portfolio-item {
   overflow: hidden;
 }
 
